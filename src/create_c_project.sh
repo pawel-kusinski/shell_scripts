@@ -55,5 +55,6 @@ EOF
 
 mkdir build
 mkdir .vscode
+code .
 
 exit 0
