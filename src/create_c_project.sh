@@ -25,7 +25,6 @@
 # Get the project name from the command-line argument or use "my_project" as default
 project_name="${1:-my_project}"
 
-# Create the project directory
 mkdir "$project_name"
 cd "$project_name"
 
@@ -54,12 +53,7 @@ int main() {
 }
 EOF
 
-# Create the build directory with an empty ".keep" file
 mkdir build
-touch build/.keep
-
-# Create the .vscode directory
 mkdir .vscode
 
-# Exit the script
 exit 0
