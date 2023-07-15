@@ -22,8 +22,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# Get the project name from the command-line argument or use "my_project" as default
-project_name="${1:-my_project}"
+# Get the project name from the command-line argument or use "my_c_project" as default
+project_name="${1:-my_c_project}"
 
 mkdir "$project_name"
 cd "$project_name"
