@@ -28,11 +28,19 @@ project_name="${1:-my_c_project}"
 mkdir "$project_name"
 cd "$project_name"
 
+# Create the .gitignore file
+cat > .gitignore <<EOF
+.vscode/*
+!.vscode/c_cpp_properties.json
+build/
+EOF
+
 # Create the CMakeLists.txt file
 cat > CMakeLists.txt <<EOF
 cmake_minimum_required(VERSION 3.0)
 project($project_name C)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_C_STANDARD 11)
 
 # Define the source file variable
@@ -48,7 +56,7 @@ cat > src/main.c <<EOF
 #include <stdio.h>
 
 int main() {
-    printf("Hello, world!\\n");
+    printf("Hello, $project_name!\\n");
     return 0;
 }
 EOF
