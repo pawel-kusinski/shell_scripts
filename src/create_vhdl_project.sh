@@ -43,7 +43,7 @@ cat > .gitignore <<EOF
 EOF
 
 # Create the VHDL file for entity design with boilerplate code
-cat > src/"$entity_name".vhdl <<EOF
+cat > src/"$entity_name".vhd <<EOF
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -73,7 +73,7 @@ end architecture;
 EOF
 
 # Create the test bench file with boilerplate code
-cat > tb/"$entity_name"_tb.vhdl <<EOF
+cat > tb/"$entity_name"_tb.vhd <<EOF
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
